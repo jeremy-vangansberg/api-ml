@@ -35,6 +35,6 @@ def predict_pipeline(description=None, url_image=None):
 
 # print(model.summary())
 
-print(predict_pipeline('test', 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg'))
+# print(predict_pipeline('test', 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg'))
 
 
