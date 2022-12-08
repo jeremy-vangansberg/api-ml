@@ -14,8 +14,13 @@ labels = [
     'Computers'
     ]
 
+
+
 def PreprocessingImg(url_image='https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') :
   ### Fonction effectuant le preprocessing nécessaire sur une image ##
+    opener = urllib.request.build_opener()
+    opener.addheaders = [('User-agent', 'Mozilla/5.0')]
+    urllib.request.install_opener(opener)
     urllib.request.urlretrieve(url_image, "url-image.jpg")
     image = keras.preprocessing.image.load_img("url-image.jpg", grayscale=False, color_mode="rgb", target_size=[224,224], interpolation="nearest")
     array = keras.preprocessing.image.img_to_array(image)
@@ -30,6 +35,6 @@ def predict_pipeline(description=None, url_image=None):
 
 # print(model.summary())
 
-# print(predict_pipeline('test', 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg'))
+print(predict_pipeline('test', 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg'))
 
 
