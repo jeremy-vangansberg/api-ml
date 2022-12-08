@@ -3,3 +3,4 @@ pydantic
 uvicorn
 tensorflow==2.11
 numpy
+pillow
