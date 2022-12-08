@@ -14,8 +14,6 @@ labels = [
     'Computers'
     ]
 
-
-
 def PreprocessingImg(url_image='https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') :
   ### Fonction effectuant le preprocessing nécessaire sur une image ##
     opener = urllib.request.build_opener()
@@ -33,8 +31,5 @@ def predict_pipeline(description=None, url_image=None):
     preds = model.predict([text_input, img_input])
     return labels[np.argmax(preds)]
 
-# print(model.summary())
-
-# print(predict_pipeline('test', 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg'))
 
 

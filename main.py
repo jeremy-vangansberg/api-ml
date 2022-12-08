@@ -6,7 +6,7 @@ from app.model import predict_pipeline
 app = FastAPI()
 
 class TextIn(BaseModel):
-    text: str
+    description: str
     url: str
 
 class PredictionOut(BaseModel):
@@ -14,7 +14,7 @@ class PredictionOut(BaseModel):
 
 @app.post("/predict", response_model=PredictionOut)
 def predict(payload:TextIn):
-    category_pred = predict_pipeline(payload.text, payload.url)
+    category_pred = predict_pipeline(payload.description, payload.url)
     return {'category': category_pred}
 
 if __name__ == '__main__':
