@@ -5,14 +5,14 @@ import urllib
 model = keras.models.load_model('app/best_model_multi')
 
 labels = [
-    'Home Furnishing',
-    'Baby Care',
-    'Watches',       
-    'Home Decor & Festive Needs', 
-    'Kitchen & Dining',       
-    'Beauty and Personal Care', 
-    'Computers'
-    ]
+  'Home Furnishing',
+ 'Baby Care',
+ 'Watches',
+ 'Home Decor & Festive Needs',
+ 'Kitchen & Dining',
+ 'Beauty and Personal Care',
+ 'Computers'
+ ]
 
 def PreprocessingImg(url_image='https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') :
   ### Fonction effectuant le preprocessing nécessaire sur une image ##
